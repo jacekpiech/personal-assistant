@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "personal-assistant"
+version = "0.1.0"
+description = ""
+authors = ["TJacek <tjacekpiech@poczta.fm>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.6"
+ruff = "^0.4.4"
+requests = "^2.31.0"
+include = "^0.2.2"
+pre-commit = "^3.7.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
