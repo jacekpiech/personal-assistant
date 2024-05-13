@@ -1,0 +1,10 @@
+{% extends "weather/base.html" %}
+{%block title%}{{journal.title}}{%endblock%}
+{% block content %}
+<h1>{{ weather_entry.name }}</h1>
+<p>Opublikowany: {{ weather_entry.date }}</p>
+<p>Godzina pomiaru:  {{ weather_entry.measurement_time }}</p>
+<p>Temperatura: {{ weather_entry.temperature}}</p>
+<p>Ciśnienie: {{ weather_entry.pressure }}</p>
+<p>Podsumowanie dnia: {{ weather_entry.summary }}</p>
+{% endblock %}
