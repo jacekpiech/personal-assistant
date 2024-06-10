@@ -1,13 +1,10 @@
 from requests import get
 from django.utils import timezone
+from weather.models import Weather
+from assistant.celery import app as celery_app
 
-from assistant.assistant.celery import app
-from assistant.weather.models import Weather
-from celery import shared_task
-
-
-@shared_task
-def save_weather_data():
+@celery_app.task(bind=True)
+def save_weather_data(self):
     response = get(f'https://danepubliczne.imgw.pl/api/data/synop/station/lodz/')
     response_data: dict = response.json()
 
@@ -26,6 +23,3 @@ def save_weather_data():
 
     if Weather.objects.count() == 0 or Weather.objects.latest('date').measurement_time != weather.measurement_time:
         weather.save()
-
-
-app.autodiscover_tasks()

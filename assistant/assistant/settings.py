@@ -37,16 +37,22 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "weather.apps.WeatherConfig",
+    "users",
+    "weather",
     "django_celery_results",
     "django_celery_beat",
     "tailwind",
 
+
 ]
+
+AUTH_USER_MODEL = "users.CustomUser"
 
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND = 'django-db'
 CELERY_CACHE_BACKEND = 'default'
+CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
+
 
 # django setting.
 CACHES = {
