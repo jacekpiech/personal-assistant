@@ -18,7 +18,8 @@ class Weather(models.Model):
     rainfall = models.FloatField(verbose_name="Opad deszczu")
     summary = models.TextField()
     air_quality = models.FloatField()
-    data = models.JSONField(default=dict())
+    data = models.JSONField(default=dict)
+
 
     class Meta:
         ordering = ["-date"]

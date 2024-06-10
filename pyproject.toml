@@ -12,6 +12,11 @@ ruff = "^0.4.4"
 requests = "^2.31.0"
 include = "^0.2.2"
 pre-commit = "^3.7.1"
+celery = "^5.4.0"
+redis = "^5.0.4"
+django-tailwind = "^3.8.0"
+django-celery-results = "^2.5.1"
+django-celery-beat = "^2.6.0"
 
 
 [build-system]
