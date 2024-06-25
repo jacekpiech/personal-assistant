@@ -16,7 +16,7 @@ class Weather(models.Model):
     pressure = models.FloatField()
     wind_speed = models.FloatField()
     rainfall = models.FloatField(verbose_name="Opad deszczu")
-    summary = models.TextField()
+    summary = models.TextField(null=True,blank=True,verbose_name="Podsumowanie pogody OpenAI", help_text="Tekst zwrotny z chatGPT, domyślnie pusty")
     air_quality = models.FloatField()
     data = models.JSONField(default=dict)
 

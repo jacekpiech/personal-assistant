@@ -18,3 +18,8 @@ def weather_detail(request, pk):
     return render(
         request, "weather/post/weather_detail.html", {"weather_entry": weather_entry}
    )
+
+def test_tailwind(request):
+    return render(
+        request, "weather/post/index.html"
+    )
