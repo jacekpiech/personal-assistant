@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404
 from .models import Weather
-from .utils import save_weather_data
+from .utils import save_weather_data, populate_weather_summary
 
 
 def weather_list(request):
