@@ -25,7 +25,9 @@ def save_weather_data():
         data=response_data,
 
     )
-    weather.save()
+
+    if Weather.objects.count() == 0 or Weather.objects.filter(name=weather.name, measurement_time=weather.measurement_time).count() == 0:
+        weather.save()
 
 
 def save_weather_to_file(data: str, filepath: str = "weather.txt") -> None:
