@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+#wylistuj wszystkie wpisy z modelu Journal
+    <h1>Journal</h1>
+    <ul>
+        {% for journal in journal_entries %}
+            <li>
+                <a href="{% url 'journal:journal_detail' journal.id %}">{{ journal.title }}</a>
+                <p>{{ journal.date }}</p>
+                <p>{{ journal.summary }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

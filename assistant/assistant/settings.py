@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "compressor",
     "users",
+    "tinymce",
     "weather",
+    "dailyjournal",
     "django_celery_results",
     "django_celery_beat",
 
