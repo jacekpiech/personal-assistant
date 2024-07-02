@@ -17,6 +17,10 @@ redis = "^5.0.4"
 django-tailwind = "^3.8.0"
 django-celery-results = "^2.5.1"
 django-celery-beat = "^2.6.0"
+django-compressor = "^4.5"
+poetry-plugin-dotenv = "^2.1.6"
+openai = "^1.35.3"
+python-dotenv = "^1.0.1"
 
 
 [build-system]

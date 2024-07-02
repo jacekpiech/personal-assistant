@@ -1,0 +1,7 @@
+Dane pogodowe dla stacji: Łódź
+Odczyt w godzinie: 15, w dniu: 2024-06-25
+Temperatura: 23.6
+Opady: 0
+Wilgotność: 49.3
+Wiatr: 3m/s
+Cisnienie: 1018.9
